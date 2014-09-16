@@ -1,0 +1,22 @@
+{
+  "name": "lloydramey",
+  "version": "0.2.0",
+  "private": true,
+  "authors": [
+    "Lloyd Ramey <lnr0626@gmail.com>"
+  ],
+  "description": "An exploration into javascript/html tools which will conveniently provide me with a website",
+  "license": "Apache v2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-stylus": "~3.2.0",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0"
+  }
+}
