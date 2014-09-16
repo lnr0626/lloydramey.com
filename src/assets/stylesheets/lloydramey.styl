@@ -1,21 +1,57 @@
+$navbar-default-bg = #fff
+$navbar-default-border = none
+$navbar-default-brand-color = #777
+$navbar-default-brand-bg = transparent
+$navbar-default-brand-hover-color = darken($navbar-default-brand-color, 50%)
+$navbar-default-brand-hover-bg = transparent
+$navbar-margin-bottom = 0
+$navbar-default-link-color = #777
+$navbar-default-link-hover-color = darken($navbar-default-link-color, 50%)
+$navbar-default-link-hover-bg = transparent
+$navbar-default-link-active-color = darken($navbar-default-link-color, 80%)
+$navbar-default-link-active-bg = transparent
+
 @import bootstrap
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: auto;
-  /* Set the fixed height of the footer here */
-  height: auto;
-}
+.navbar-default
+  .navbar-nav
 
-.container .text-muted .text-center {
-  margin-top: 20px;
-}
+    > li > a
+      &
+        border-bottom 2px solid transparent
+
+      &:hover,
+      &focus
+        border-bottom-color rgba(0,0,0,.25)
+
+    > .active > a
+      &,
+      &:hover,
+      &:focus
+        border-bottom-color rgba(0,0,0,.5)
+    
+
+html
+  position relative
+  min-height 100%
+
+body 
+  margin-bottom 60px
+
+hr.header
+  margin-top 0px
+
+.footer 
+  position absolute
+  bottom 0
+  width inherit
+  height auto
+  padding-left 0
+  padding-right $grid-gutter-width
+
+.text-muted .text-center 
+  margin-top 20px
+
+nav
+  hr
+    margin-top: $navbar-height

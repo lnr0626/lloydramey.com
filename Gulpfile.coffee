@@ -40,6 +40,7 @@ paths=
 
 styles = ->
   gulp.src paths.src_stylesheets
+    .pipe gp.plumber()
     .pipe gp.stylus include: paths.vendor_styl
     .pipe gp.autoprefixer "> 1%"
     .pipe gp.concat pak.name + '.css'

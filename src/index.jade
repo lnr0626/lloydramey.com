@@ -33,12 +33,14 @@ html(lang='en-US')
                   a(href='#') Home
                 li
                   a(href='#') About
-    .container
-      p Body Content
-    .container
-      .footer
-        hr
-        .container.text-muted.text-center
-          p Designed and built by Lloyd Ramey using bootstrap.
-          p Code licensed under Apache v2.0, available on Github.
+      hr.header
+      block content
+        h1 Welcome!
+        p This is currently just a simple site, the purpose is really just to give me a place to be able to explore some techniques that I have interest in.
+      .footer.container
+        .text-muted.text-center
+          hr
+          block footer-text
+            p Designed and built by Lloyd Ramey using bootstrap.
+            p Code licensed under Apache v2.0, available on Github.
     script(src='/assets/scripts/lloydramey-site.min.js')
