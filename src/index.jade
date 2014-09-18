@@ -17,23 +17,22 @@ html(lang='en-US')
     <![endif]--> 
   body
     .container
-      nav.navbar.navbar-default(role='navigation')
-        .container-fluid
-          .navbar-header
-            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-              span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.navbar-brand(href='#') Lloyd Ramey
-          .navbar-collapse.collapse.navbar-right
-            ul.nav.navbar-nav
-              block navbar-links
-                li.active
-                  a(href='#') Home
-                li
-                  a(href='#') About
-      hr.header
+      .titlebar
+        .titlebar-brand Lloyd Ramey
+        .titlebar-location.dropdown
+          a.titlebar-active.dropdown-toggle(type='button', id='dropdownNav', data-toggle='dropdown') /
+          ul.dropdown-menu(role='menu', aria-labelledby='dropdownNav')
+            li: a(role='menuitem', tabindex='-1', href='#') /
+            li: a(role='menuitem', tabindex='-1', href='#') |-Sub1
+            li: a(role='menuitem', tabindex='-1', href='#') |--SubSub1
+            li: a(role='menuitem', tabindex='-1', href='#') +-About
+        hr
+      .pull-right.site-map
+        a /
+        a |-Home
+        a |-Sub1
+        a |--SubSub1
+        a +-About
       block content
         h1 Welcome!
         p This is currently just a simple site, the purpose is really just to give me a place to be able to explore some techniques that I have interest in.

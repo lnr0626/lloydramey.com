@@ -1,6 +1,6 @@
 $navbar-default-bg = #fff
 $navbar-default-border = none
-$navbar-default-brand-color = #777
+$navbar-default-brand-color = #666
 $navbar-default-brand-bg = transparent
 $navbar-default-brand-hover-color = darken($navbar-default-brand-color, 50%)
 $navbar-default-brand-hover-bg = transparent
@@ -11,24 +11,80 @@ $navbar-default-link-hover-bg = transparent
 $navbar-default-link-active-color = darken($navbar-default-link-color, 80%)
 $navbar-default-link-active-bg = transparent
 
+$titlebar-brand-color = #777
+$titlebar-location-color = #666
+
 @import bootstrap
 
-.navbar-default
-  .navbar-nav
+.titlebar
+  // width: 50%
+  margin-top: 20px
 
-    > li > a
-      &
-        border-bottom 2px solid transparent
+  .titlebar-brand
+    @extend .h2
+    display: inline
+    color: $titlebar-brand-color
+  .titlebar-location
+    display: inline
+    > a.titlebar-active
+      @extend .h3
+      display: inline !important
+      visibility: visible !important
+      font-weight: $headings-font-weight
+      color: $titlebar-location-color
+      verticle-align baseline
+      line-height $line-height-base
+      font-family $font-family-monospace
+      text-align left
+      width 200px
 
-      &:hover,
-      &focus
-        border-bottom-color rgba(0,0,0,.25)
-
-    > .active > a
-      &,
       &:hover,
       &:focus
-        border-bottom-color rgba(0,0,0,.5)
+        color darken($titlebar-location-color, 50%)
+        border none
+        text-decoration none
+        cursor pointer
+
+      &:active
+        outline 0
+        box-shadow none
+
+    .dropdown-menu
+      border-radius 0
+      box-shadow none
+      border none
+
+      > li > a
+        @extend .h4
+        width inherit
+        display inline !important
+        line-height $line-height-base
+        font-family $font-family-monospace
+
+
+.site-map
+  > a
+    display block
+    white-space pre-wrap
+    font-family $font-family-monospace
+
+
+// .navbar-default
+//   .navbar-nav
+
+//     > li > a
+//       &
+//         border-bottom 2px solid transparent
+
+//       &:hover,
+//       &focus
+//         border-bottom-color rgba(0,0,0,.25)
+
+//     > .active > a
+//       &,
+//       &:hover,
+//       &:focus
+//         border-bottom-color rgba(0,0,0,.5)
     
 
 html
@@ -39,13 +95,14 @@ body
   margin-bottom 60px
 
 hr.header
-  margin-top 0px
+  width: auto
 
 .footer 
   position absolute
   bottom 0
   width inherit
   height auto
+  // Yay for hacky things....
   padding-left 0
   padding-right $grid-gutter-width
 
