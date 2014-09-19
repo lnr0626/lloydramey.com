@@ -45,17 +45,12 @@ styles = ->
     .pipe gp.autoprefixer "> 1%"
     .pipe gp.concat pak.name + '.css'
 
-gulp.task 'copy_fonts', ->
+gulp.task 'copy-fonts', ->
   gulp.src paths.vendor_fonts
     .pipe gulp.dest paths.dest_fonts
 
-gulp.task 'css_production', ->
-  styles()
-    .pipe gp.csso()
-    .pipe gulp.dest paths.dest_stylesheets
-    .pipe gp.livereload(server)
 
-gulp.task 'css', ['copy_fonts'], ->
+gulp.task 'css', ['copy-fonts'], ->
   gp.util.log 'Performing css task'
   styles()
     .pipe gulp.dest paths.dest_stylesheets
@@ -70,6 +65,7 @@ gulp.task 'js', ->
     .pipe gp.concat pak.name + '.min.js'
     .pipe gulp.dest paths.dest_scripts
     .pipe gp.livereload server
+
 
 gulp.task 'templates', ->
   gp.util.log 'Performing templates task'
@@ -91,10 +87,32 @@ gulp.task 'watch', ->
     if err
       return console.log err
     else
-      gulp.watch paths.src_stylesheets, ['css']
+      gulp.watch paths.src_stylesheets, ['css-production']
       gulp.watch paths.src_js, ['js']
       gulp.watch paths.src_coffee, ['js'] 
       gulp.watch paths.src_templates, ['templates']
       return
 
-gulp.task 'default', ['js', 'css', 'templates', 'express', 'watch']
+gulp.task 'default', ['js', 'css-production', 'templates', 'express', 'watch']
+
+# Production tasks
+
+gulp.task 'css-production', ['templates-production'], ->
+  styles()
+    .pipe gp.uncss html: [dest + 'index.html']
+    .pipe gp.csso()
+    .pipe gp.rename suffix: '.min'
+    .pipe gulp.dest paths.dest_stylesheets
+
+gulp.task 'templates-production', ->
+  gp.util.log 'Performing templates task'
+  gulp.src paths.src_templates
+    .pipe gp.plumber()
+    .pipe gp.jade()
+    .pipe gulp.dest dest
+
+gulp.task 'production', ['css-production', 'templates-production']
+
+gulp.task 'clean', ->
+  gulp.src dest, read: false
+    .pipe gp.rimraf()

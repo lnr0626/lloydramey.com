@@ -1,114 +1,61 @@
-$navbar-default-bg = #fff
-$navbar-default-border = none
-$navbar-default-brand-color = #666
-$navbar-default-brand-bg = transparent
-$navbar-default-brand-hover-color = darken($navbar-default-brand-color, 50%)
-$navbar-default-brand-hover-bg = transparent
-$navbar-margin-bottom = 0
-$navbar-default-link-color = #777
-$navbar-default-link-hover-color = darken($navbar-default-link-color, 50%)
-$navbar-default-link-hover-bg = transparent
-$navbar-default-link-active-color = darken($navbar-default-link-color, 80%)
-$navbar-default-link-active-bg = transparent
+// Import core bootstrap stuff so that 
+// I can use what I want
 
-$titlebar-brand-color = #777
-$titlebar-location-color = #666
+@import 'variables.styl'
+@import 'mixins.styl'
 
-@import bootstrap
+@import "normalize"
+@import "print"
 
-.titlebar
-  // width: 50%
-  margin-top: 20px
+@import "scaffolding"
+@import "utilities"
+@import "type"
+@import "code"
 
-  .titlebar-brand
-    @extend .h2
-    display: inline
-    color: $titlebar-brand-color
-  .titlebar-location
-    display: inline
-    > a.titlebar-active
-      @extend .h3
-      display: inline !important
-      visibility: visible !important
-      font-weight: $headings-font-weight
-      color: $titlebar-location-color
-      verticle-align baseline
-      line-height $line-height-base
-      font-family $font-family-monospace
-      text-align left
-      width 200px
+$body-side-padding = 50px
+$body-top-padding = 30px;
+$content-left-padding = 30px;
 
-      &:hover,
-      &:focus
-        color darken($titlebar-location-color, 50%)
-        border none
-        text-decoration none
-        cursor pointer
+body
+  padding $body-side-padding
+  padding-top $body-top-padding
+  max-width $screen-md-min
 
-      &:active
-        outline 0
-        box-shadow none
+h1
+  padding-bottom 30px
+  margin 0px
 
-    .dropdown-menu
-      border-radius 0
-      box-shadow none
-      border none
+h4
+  margin 0px
+  padding-bottom 10px
 
-      > li > a
-        @extend .h4
-        width inherit
-        display inline !important
-        line-height $line-height-base
-        font-family $font-family-monospace
+.content
+  width 100%
+  max-width ($screen-md-min / 3) * 2
 
+  @media (min-width: $screen-md-min)
+    float left
+    width ($screen-md-min / 3) * 2
 
-.site-map
-  > a
-    display block
-    white-space pre-wrap
-    font-family $font-family-monospace
+  // @media screen and (min-width: $screen-md-min)
+  //   float left
 
+  // @media screen and (max-width: $screen-md-min)
+  //   float none
 
-// .navbar-default
-//   .navbar-nav
+  > p
+    padding-left $content-left-padding
+    padding-bottom 10px
 
-//     > li > a
-//       &
-//         border-bottom 2px solid transparent
+.navigation
+  width 100%
+  max-width ($screen-md-min / 3) * 2
 
-//       &:hover,
-//       &focus
-//         border-bottom-color rgba(0,0,0,.25)
+  @media (min-width: $screen-md-min)
+    float right
+    text-align right
+    width ($screen-md-min / 3) - 2 * $body-side-padding
 
-//     > .active > a
-//       &,
-//       &:hover,
-//       &:focus
-//         border-bottom-color rgba(0,0,0,.5)
-    
-
-html
-  position relative
-  min-height 100%
-
-body 
-  margin-bottom 60px
-
-hr.header
-  width: auto
-
-.footer 
-  position absolute
-  bottom 0
-  width inherit
-  height auto
-  // Yay for hacky things....
-  padding-left 0
-  padding-right $grid-gutter-width
-
-.text-muted .text-center 
-  margin-top 20px
-
-nav
-  hr
-    margin-top: $navbar-height
+  // @media screen and (max-width: $screen-md-min)
+  //   float none
+  //   display inline
