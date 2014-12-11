@@ -31,6 +31,7 @@ paths=
   src_coffee:         this.src_scripts + '*.coffee'
   src_js:             this.src_scripts + '*.js'
   src_templates:      src + '*.jade'
+  src_pdf:            src + '*.pdf'
 
   dest_stylesheets:   dest + assets + 'stylesheets'
   dest_scripts:       dest + assets + 'scripts'
@@ -80,6 +81,10 @@ gulp.task 'express', ->
   gp.util.log 'Listening on port: ' + port
   return
 
+gulp.task 'copy-pdf', ->
+  gulp.src paths.src_pdf
+    .pipe gulp.dest dest
+
 gulp.task 'watch', ->
   server.listen lr_port, (err)->
     if err
@@ -89,9 +94,10 @@ gulp.task 'watch', ->
       gulp.watch paths.src_js, ['js']
       gulp.watch paths.src_coffee, ['js'] 
       gulp.watch paths.src_templates, ['templates']
+      gulp.watch paths.src_pdf, ['copy-pdf']
       return
 
-gulp.task 'default', ['js', 'css-production', 'templates', 'express', 'watch']
+gulp.task 'default', ['js', 'css-production', 'copy-pdf', 'templates', 'express', 'watch']
 
 # Production tasks
 
@@ -109,7 +115,7 @@ gulp.task 'templates-production', ->
     .pipe gp.jade()
     .pipe gulp.dest dest
 
-gulp.task 'production', ['css-production', 'templates-production']
+gulp.task 'production', ['css-production', 'templates-production', 'copy-pdf']
 
 gulp.task 'clean', ->
   gulp.src dest, read: false

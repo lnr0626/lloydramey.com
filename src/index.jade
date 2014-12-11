@@ -1,14 +1,16 @@
 doctype html
 html(lang='en-US')
   head
-    block title
-      title Lloyd Ramey
+    title Lloyd Ramey
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='Lloyd Ramey')
     link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Raleway:100,700')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:400,700,900')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
     link(rel='stylesheet', href='/assets/stylesheets/lloydramey-site.min.css')
 
     <!--[if lt IE 9]>
@@ -16,7 +18,8 @@ html(lang='en-US')
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]--> 
   body
-    h1 Lloyd Ramey
+    .header
+      h1 Lloyd Ramey
     .content
       h4 Who Am I?
       p I am a recent graduate from Virginia Tech. I suppose that 
@@ -40,14 +43,7 @@ html(lang='en-US')
         | time, I'll go to a local park with my dog for a short walk - 
         | neither of us have the endurance to go very far, esp. in the
         | summer humidity.
-
-      p All of these things are definitely a part of me. They contribute, 
-        | but are not the whole. I've left out one of the most important
-        | (at least most important to me) bits - that is my faith in Christ.
-        | However I am not going to speak to much on that because I do not
-        | believe that I will be able to change anyone's mind through a 
-        | simple explaination of my faith. Also, I do not think the internet
-        | is a viable option for discussions of any significance or length.
+        
       h4 What do I do?
       p As I mentioned before, I code for fun and profit. Currently, my 
         | projects mostly consist of web development, but that changes
@@ -79,3 +75,4 @@ html(lang='en-US')
       p: a(href='http://www.anothermakersjourney.com') Another Makers Journey
       p: a(href='https://github.com/lnr0626') My Github
       p: a(href='https://github.com/lnr0626/lloydramey-site') Github Repo for this site
+      p: a(href='/calc_review.pdf') A Short Review of Basic Calculus
