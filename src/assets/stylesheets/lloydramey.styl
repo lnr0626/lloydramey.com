@@ -1,61 +1,61 @@
-// Import core bootstrap stuff so that 
-// I can use what I want
+$body-color = #777777
+$link-color = #3b8bba
 
-@import 'variables.styl'
-@import 'mixins.styl'
+html
+  font-size 16px;
+  font-weight 400
 
-@import "normalize"
-@import "print"
-
-@import "scaffolding"
-@import "utilities"
-@import "type"
-@import "code"
-
-$body-side-padding = 50px
-$body-top-padding = 30px;
-$content-left-padding = 30px;
+html,
+body
+  color $body-color
+  font-family 'Lato', sans-serif
 
 body
-  padding $body-side-padding
-  padding-top $body-top-padding
-  max-width $screen-md-min
+  width 100%
 
-h1
-  padding-bottom 30px
-  margin 0px
+@media(min-width: 48em)
+  body
+    width 42em
+    margin-left auto
+    margin-right auto
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family 'Raleway', sans-serif
+  color darken($body-color, 30%)
+  font-weight 700
+  
+a
+  text-decoration none
+  color $link-color
 
-h4
-  margin 0px
-  padding-bottom 10px
+a:hover,
+a:focus
+  color darken($link-color, 20%)
 
+a:visited
+  color darken($link-color, 40%)
+
+.header
+  margin-top 1.5em
+  height 6em
+  text-align center
+  border-bottom 1px solid rgb(238, 238, 238)
+  
+  h1
+    font-weight 100
+    font-size 300%
+    margin 0
+    
 .content
-  width 100%
-  max-width ($screen-md-min / 3) * 2
-
-  @media (min-width: $screen-md-min)
-    float left
-    width ($screen-md-min / 3) * 2
-
-  // @media screen and (min-width: $screen-md-min)
-  //   float left
-
-  // @media screen and (max-width: $screen-md-min)
-  //   float none
-
-  > p
-    padding-left $content-left-padding
-    padding-bottom 10px
-
-.navigation
-  width 100%
-  max-width ($screen-md-min / 3) * 2
-
-  @media (min-width: $screen-md-min)
-    float right
-    text-align right
-    width ($screen-md-min / 3) - 2 * $body-side-padding
-
-  // @media screen and (max-width: $screen-md-min)
-  //   float none
-  //   display inline
+  text-align center
+  
+  p
+    margin-left 2em
+    margin-right 2em
+    text-align justify
+    line-height 2
