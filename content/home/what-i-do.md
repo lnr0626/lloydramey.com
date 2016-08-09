@@ -2,7 +2,7 @@
 date = "2016-08-09T17:11:49-04:00"
 draft = false
 title = "what i do"
-Weight = 0
+weight = 2
 
 +++
 
