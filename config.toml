@@ -4,7 +4,8 @@ theme = "cocoa"
 baseUrl = "https://lloydramey.com/"
 
 [permalinks]
-fixed = ":title/"
+fixed = ":slug/"
+home = ":slug"
 
 [params]
 DateForm = "Jan 2, 2006"
@@ -12,6 +13,7 @@ DateFormFull = "Mon Jan 2 2006 15:04:05 EST"
 Lang = "en"
 Twitter = "atrayan"
 GitHub = "lnr0626"
+GitLab = "lnr0626"
 LinkedIn = "lnr0626"
 Facebook = "lnr0626"
 Email = "lnr0626@gmail.com"
