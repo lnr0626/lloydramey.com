@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<section class="main">
+    <div class="container">
+        <div class="content">
+            {{ range .Data.Pages }}
+                {{ if eq .Section "home" }}
+                    {{ partial "page-heading.html" . }}
+                    <div class="markdown">
+                        {{ .Content }}
+                    </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ partial "footer.html" . }}
+

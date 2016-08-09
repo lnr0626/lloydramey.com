@@ -1,15 +1,10 @@
-image: lnr0626/gulp-and-aws:1.0
-
-cache:
-  paths:
-    - node_modules/
+image: lnr0626/hugo-aws:1.0
 
 deploy:
   stage: deploy
   environment: production
   script:
-    - npm install
-    - node_modules/.bin/gulp production
-    - aws s3 sync dist s3://lloydramey.com/
+    - hugo -v
+    - aws s3 sync public s3://lloydramey.com/
   only: 
     - master
