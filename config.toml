@@ -2,6 +2,7 @@ languageCode = "en-us"
 Title = "Lloyd Ramey"
 theme = "cocoa"
 baseUrl = "https://lloydramey.com/"
+enableRobotsTXT = true
 
 [permalinks]
 fixed = ":slug/"
