@@ -5,6 +5,6 @@ deploy:
   environment: production
   script:
     - hugo -v
-    - aws s3 sync public s3://lloydramey.com/
+    - aws s3 sync --delete public s3://lloydramey.com/
   only: 
     - master
