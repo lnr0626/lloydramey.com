@@ -24,12 +24,12 @@
 
 {{ else }}
 
-<link rel="stylesheet" href="/css/reset.css?{{ .Now.Unix }}">
-<link rel="stylesheet" href="/css/pygments.css?{{ .Now.Unix }}">
-<link rel="stylesheet" href="/css/main.css?{{ .Now.Unix }}">
+<link rel="stylesheet" href="/css/reset.css?{{ now.Unix }}">
+<link rel="stylesheet" href="/css/pygments.css?{{ now.Unix }}">
+<link rel="stylesheet" href="/css/main.css?{{ now.Unix }}">
 
 {{range .Site.Params.ExtraCssFiles}}
-    <link rel="stylesheet" href="{{.}}?{{ .Now.Unix }}">
+    <link rel="stylesheet" href="{{.}}?{{ now.Unix }}">
 {{end}}
 
 {{ end }}

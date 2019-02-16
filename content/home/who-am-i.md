@@ -1,13 +1,35 @@
 +++
 date = "2016-08-09T16:59:57-04:00"
 draft = false
-title = "Who Am I"
+title = "About Me"
 weight = 1
 
 +++
 
-You know, I've thought a lot about what to write here and I'm still not sure. I can tell you things about myself - e.g. I love the out doors, but don't spend nearly enough time there, I enjoy coding to the point that it distracts me from other things, I'm a Christain who is still trying to figure out how that fits into working as a software engineer. But is that what you're looking for? I don't know, I don't really think anyone but yourself can say for sure. So I'll go for it, and maybe change it again in another couple months. Afterall, can anyone fully describe themselves in a few sentences?
+My interests morph over time, but recently I've been diving into food science
+(as it relates to home cooking), rock climbing, backpacking, and a few other
+things. I occasionally blog about things I've cooked, and infrequently about
+things I've coded. A pet peeve of mine is food blogs that bury the lead by
+writing a dissertation about things only slightly related to the recipe, and so
+I just stick to the recipe and maybe a paragraph describing how it'll taste.
 
-I'm a recent (can you still say recent after 2 years?) graduate from Virginia Tech, currently working for a small company named BTI360. I'm also enrolled in UIUC's online MCS program. In my (limited) free time, I enjoy reading - mostly I read Science Fiction/Fantasy, but every now and then I do venture out into other genres. I want to say that I'm a gamer, but I know that's not true. I used to game, but recently have not had the time (or rather used the time I have in other ways).
+### Career
 
+I am currently a Software Engineer at a small company named BTI360. So far a
+majority of my work has been in the search and analytics domains. Within that
+area, I have worked on a decently large variety of things - including query
+parsers, a percolator like service built on Solr, video analysis pipelines, etc.
+My current project is focused on surfacing key pieces of video data to help
+users analyze large amounts of video streams quickly; while ensuring that they
+don't miss important information.
 
+I work on various other things on the side, I've written about some of my past
+projects on my blog - check them out if you're interested.
+
+### Schooling
+
+I graduated with a degree in Computer Engineering from Virginia Tech, and am on
+track to graduate this May (2019) with a Masters of Computer Science from UIUC's
+online MCS program. I've been pleasantly surprised with the program so far -
+I've been able to apply material that I was interested in, but never though I'd
+actually have a use for.
