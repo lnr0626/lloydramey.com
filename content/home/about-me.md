@@ -1,10 +1,9 @@
-+++
-date = "2016-08-09T16:59:57-04:00"
-draft = false
-title = "About Me"
-weight = 1
-
-+++
+---
+draft: false
+title: 'About Me'
+weight: 1
+hidden: true
+---
 
 My interests morph over time, but recently I've been diving into food science
 (as it relates to home cooking), rock climbing, backpacking, and a few other

@@ -1,23 +1,49 @@
 languageCode = "en-us"
 Title = "Lloyd Ramey"
-theme = "cocoa"
+copyright = "© <a href=\"https://github.com/lnr0626\">Lloyd Ramey</a> 2020"
+theme = "kiss"
 baseUrl = "https://lloydramey.com/"
 enableRobotsTXT = true
+googleAnalytics = "UA-52697147-4"
+
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "Lloyd Ramey" # Author full name
+authorEmail = "public@lloydramey.com" # Author email
+
+[params.assets]
+customCSS = ["css/custom.css"]
 
 [permalinks]
 fixed = ":slug/"
 home = ":slug"
 
 [params]
-DateForm = "Jan 2, 2006"
-DateFormFull = "Mon Jan 2 2006 15:04:05 EST"
-Lang = "en"
-Twitter = "https://twitter.com/atrayan"
-GitHub = "https://github.com/lnr0626"
-GitLab = "https://gitlab.com/u/lnr0626"
-LinkedIn = "https://www.linkedin.com/in/lloyd-ramey-97122a4a"
-Email = "public@lloydramey.com"
-Author = "Lloyd Ramey"
 CodeBlogUrl = "https://anothermakersjourney.com/"
 FoodBlogUrl = "https://derivativefood.com/"
-GATracker = "UA-52697147-4"
+
+[params.info]
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "Lloyd Ramey" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
+
+[params.social]
+twitter = "atrayan"
+github = "lnr0626"
+email = "public@lloydramey.com"
+linkedin = "lloyd-ramey"
+instagram = "lloyd.ramey"
+about = "about-me"
+rss = "index.xml" # Add this to show RSS button in social.
+
+[params.social.config]
+platforms = ["github","twitter", "email", "rss"]
+
+[params.sections_left]
+"/my-projects" = "Projects"
+"/about-me" = "About"
+
+[taxonomies]
+tag ="tags"

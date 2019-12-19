@@ -1,0 +1,33 @@
+.nav .title.is-5 {
+  color: #79838c;
+}
+
+.nav .icon,
+.nav .title.is-4 {
+  color: #525960;
+}
+
+.nav .icon:hover,
+.nav .title.is-4:hover,
+.nav .title.is-5:hover {
+  color: #222342;
+}
+
+.section {
+  padding: 32px 24px;
+}
+
+.nav,
+.nav > .container {
+  min-height: 32px;
+}
+
+.content h1:not(:first-child),
+.content h2:not(:first-child),
+.content h3:not(:first-child),
+.content h4:not(:first-child),
+.content h5:not(:first-child),
+.content h6:not(:first-child),
+article + article {
+  margin-top: 50px;
+}
