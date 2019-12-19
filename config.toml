@@ -1,10 +1,19 @@
-languageCode = "en-us"
-Title = "Lloyd Ramey"
-copyright = "© <a href=\"https://github.com/lnr0626\">Lloyd Ramey</a> 2020"
-theme = "kiss"
 baseUrl = "https://lloydramey.com/"
+languageCode = "en-us"
+defaultContentLanguage = "en-US"
+title = "Lloyd Ramey"
+theme = "KeepIt"
+
+paginate = 12
+enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-52697147-4"
+copyright = "© <a href=\"https://github.com/lnr0626\">Lloyd Ramey</a> 2020"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
@@ -14,36 +23,147 @@ authorEmail = "public@lloydramey.com" # Author email
 [params.assets]
 customCSS = ["css/custom.css"]
 
-[permalinks]
-fixed = ":slug/"
-home = ":slug"
+[Permalinks]
+ posts = "/:year/:filename/"
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects"
+    weight = 3
+
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 4
+
 
 [params]
-CodeBlogUrl = "https://anothermakersjourney.com/"
-FoodBlogUrl = "https://derivativefood.com/"
+    since = 2012
+    author = "Lloyd Ramey"               # Author's name
+    subtitle = "engineer. designer. climber. baker."       # Subtitle
+    # cdn_url = ""           # Base CDN URL
+    # home_mode = "" # post or other
 
-[params.info]
-enableSocial = true # Adds OpenGraph and Twitter cards
-homeTitle = "Lloyd Ramey" # Title for home page
-poweredby = true # Adds powered by hugo and kiss below Copyright
-related = true # Includes related articles at the bottom of the article
-codeCopy = true # Add copy button above code blocks
+    google_verification = ""
+    bing_verification = ""
+    yandex_verification = ""
+    pinterest_verification = ""
+    baidu_verification = ""
+
+    # avatar = "/images/me/avatar.jpg" #comment it to use gravatar
+    socialShare = true
+
+    description = "" # site description
+    keywords = "" # site keywords
+
+    license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+[params.gravatar]
+    email = "lnr0626@gmail.com"   #uncomment and insert your email address to use gravatar
+
 
 [params.social]
-twitter = "atrayan"
-github = "lnr0626"
-email = "public@lloydramey.com"
-linkedin = "lloyd-ramey"
-instagram = "lloyd.ramey"
-about = "about-me"
-rss = "index.xml" # Add this to show RSS button in social.
+    GitHub = "lnr0626"
+    Linkedin = "lloyd-ramey"
+    Twitter = "atrayan"
+    #Instagram = "xxxx"
+    Email   = "public@lloydramey.com"
+    # Facebook = "xxxx"
+    #Telegram = "xxxx"
+    #Medium = "xxxx"
+    Gitlab = "lnr0626"
+    #Youtubelegacy = "xxxx"
+    #Youtubecustom = "xxxx"
+    #Youtubechannel = "xxxx"
+    #Tumblr ="xxxx"
+    #Quora = "xxxx"
+    #Keybase = "xxxx"
+    #Pinterest = "xxxx"
+    #Reddit = "xxxx"
+    #Codepen = "xxxx"
+    #Bitbucket = "xxxx"
+    #Stackoverflow = "xxxxx"
+    #Weibo = "xxxx"
+    #Odnoklassniki = "xxxx"
+    #VKontakte = "xxxx"
+    #Flickr = "xxxx"
+    #Xing = "xxxx"
+    #Snapchat = "xxxx"
+    #Soundcloud = "xxxx"
+    #Spotify = "xxxx"
+    #Bandcamp = "xxxx"
+    #Paypal = "xxxx"
+    #Fivehundredpx = "xxxx"
+    #Mix = "xxxx"
+    #Goodreads = "xxxx"
+    #Lastfm = "xxxx"
+    #Foursquare = "xxxx"
+    #Hackernews = "xxxx"
+    #Kickstarter = "xxxx"
+    #Patreon = "xxxx"
+    #Steam = "xxxx"
+    #Twitch = "xxxx"
+    #Strava = "xxxx"
+    #Skype = "xxxx"
+    #Whatsapp = "xxxx"
+    #Zhihu = "xxxx"
+    #Douban = "xxxx"
+    #Angellist = "xxxx"
+    #Slidershare = "xxxx"
+    #Jsfiddle = "xxxx"
+    #Deviantart = "xxxx"
+    #Behance = "xxxx"
+    #Dribble = "xxxx"
+    #Wordpress = "xxxx"
+    #Vine = "xxxx"
+    #Googlescholar = "xxxx"
+    #Researchgate = "xxxx"
+    #Mastodon = "xxxx"
+    #Thingiverse = "xxxx"
 
-[params.social.config]
-platforms = ["github","twitter", "email", "rss"]
+[params.share]
+Twitter = true
+Facebook = true
+#Reddit = true
+Linkedin = true
+#Pinterest = true
+#HackerNews = true
+#Mix = true
+#Tumblr = true
+#VKontakte = true
+#Douban = true
+#Weibo = true
 
-[params.sections_left]
-"/my-projects" = "Projects"
-"/about-me" = "About"
+# Used only for Seo schema
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
-[taxonomies]
-tag ="tags"
+[author]
+  name = "Lloyd Ramey"
+
+  # [params.publisher]
+  #   name = "Lloyd Ramey"
+
+  #   [params.publisher.logo]
+  #     url = "logo.png"
+  #     width = 127
+  #     height = 40
+
+  # [params.logo]
+  #   url = "logo.png"
+  #   width = 127
+  #   height = 40
+
+  # [params.image]
+  #   url = "cover.png"
+  #   width = 800
+  #   height = 600
+
+[params.utterances]       # https://utteranc.es/
+    owner = "lnr0626"              # Your GitHub ID
+    repo = "lloydramey.com"               # The repo to store comments
