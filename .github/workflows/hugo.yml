@@ -18,7 +18,9 @@ jobs:
         with:
           extended: true
       - name: Build
-        run: hugo --minify
+        env:
+          HUGO_ENV: production
+        run: hugo --gc --minify
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v1

@@ -1,5 +1,6 @@
 ---
 title: 'Projects'
+date: 2019-12-19T18:16:38-05:00
 draft: false
 hidden: true
 slug: 'projects'
