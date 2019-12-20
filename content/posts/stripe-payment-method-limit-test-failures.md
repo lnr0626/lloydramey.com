@@ -1,7 +1,7 @@
 ---
 title: 'Fixing failing tests caused by Stripe Payment Method Limits'
 date: 2019-12-19T18:16:38-05:00
-draft: true
+draft: false
 description: How I fixed the tests that started failing due to too many payment methods attached to customers
 categories:
   - elixir
