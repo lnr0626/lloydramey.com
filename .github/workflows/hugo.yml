@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@722adc63f1aa60a57ec37892e133b1d319cae598
       - name: Checkout submodules
         shell: bash
         run: |
@@ -18,7 +18,7 @@ jobs:
           git submodule sync --recursive
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
       - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.3.2
+        uses: peaceiris/actions-hugo@10f36c7c9133c2fe4dba9a431e838d7c71980b13
         with:
           extended: true
       - name: Build
@@ -27,7 +27,7 @@ jobs:
         run: hugo --gc --minify
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@3446296876d12d4e3a0f3145a3c87e67bf0a16b5
         with:
           name: resources
           path: public/
