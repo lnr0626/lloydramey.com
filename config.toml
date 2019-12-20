@@ -1,6 +1,6 @@
 baseUrl = "https://lloydramey.com/"
-languageCode = "en-us"
-defaultContentLanguage = "en-US"
+languageCode = "en"
+defaultContentLanguage = "en"
 title = "Lloyd Ramey"
 theme = "KeepIt"
 

@@ -183,5 +183,4 @@ defmodule StripeCase do
     end
   end
 end
-
 ```
