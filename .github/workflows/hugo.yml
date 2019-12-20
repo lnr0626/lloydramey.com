@@ -1,34 +1,33 @@
 name: CI
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Hugo setup
-      uses: peaceiris/actions-hugo@v2.3.2
-      with:
-        extended: true
-    - name: Build
-      run: hugo --minify
-      
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: resources
-        path: public/
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.3.2
+        with:
+          extended: true
+      - name: Build
+        run: hugo --minify
 
-#     - name: Upload to s3
-#       env:
-#         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#       run: aws s3 sync --delete ./public/ s3://lloydramey.com/
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: resources
+          path: public/
+
+      - name: Upload to s3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: aws s3 sync --delete ./public/ s3://lloydramey.com/
