@@ -5,8 +5,10 @@ draft: false
 description: How I fixed the tests that started failing due to too many payment methods attached to customers
 categories:
   - elixir
-  - stripe
 featured_image:
+tags:
+  - programming
+  - stripe
 author: 'Lloyd Ramey'
 ---
 
