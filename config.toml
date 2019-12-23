@@ -8,7 +8,7 @@ paginate = 12
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-52697147-4"
-copyright = "© <a href=\"https://github.com/lnr0626\">Lloyd Ramey</a> 2020"
+copyright = "© Lloyd Ramey 2020"
 
 [sitemap]
   changefreq = "monthly"
